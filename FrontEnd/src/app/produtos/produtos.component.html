@@ -1,0 +1,56 @@
+
+<div class ="container">
+  <button type ="button" mat-raised-button color="primary" (click)= "exibirCadastrarProduto()">Novo</button>
+</div>
+
+
+<div class ="container" *ngIf = "cadastrar">
+  <form action="">
+    <h3>Nome</h3>
+    <input [value] = "tempNome" (input)= "tempNome = $event.target.value"/>
+    <p style="color: red;"> .{{alertaNome}}</p>
+    <br/>
+    <br/>
+    <h3>Valor</h3>
+    <input type="number" [value] = "tempValor" (input)= "tempValor = $event.target.value"/>
+    <p style="color: red;"> .{{alertaValor}}</p>
+    <br/>
+    <br/>
+    <h3>Url da Foto</h3>
+    <input style ="" type= "text" (change)= "addFile($event.target.value)"/>
+    <br/>
+    <br/>
+    <button type ="button" mat-raised-button (click)="cadastrarProduto()">Cadastrar</button>
+    <button type ="button" mat-raised-button (click)="ocultarCadastrarProduto()">Voltar</button>
+  </form>
+</div>
+
+
+<div class = "container" id = "tableContainer">
+
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="nome">
+      <mat-header-cell *matHeaderCellDef> Nome </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.nome}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="valor">
+      <mat-header-cell *matHeaderCellDef> Valor </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.valor}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="foto">
+      <mat-header-cell *matHeaderCellDef> Foto </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <img src={{element.foto}} alt="Imagem" style="max-width: 50px;">
+      </mat-cell>
+    </ng-container>
+
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+</div>>

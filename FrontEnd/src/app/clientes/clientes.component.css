@@ -1,0 +1,71 @@
+.container {
+    color: white;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
+    background-color: #555;
+    
+    
+}
+
+#tableContainer {
+    color: #000000;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: auto;
+}
+
+input {
+    color: white;
+    font-size:20px;
+    border-style: none;
+    height: 40px;
+    background-color: #666;
+    width: 100%;
+}
+
+input:focus {
+    outline: none !important;
+    border:1px #add1df;
+    border-style: solid;
+
+    box-shadow: 0 0 10px #444;
+}
+
+button{
+    margin-right: 20px;
+}
+
+mat-table{
+    color: white;
+    width: 80%;
+    margin: auto;
+}
+
+span{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+h3{
+    display: inline;
+}
+
+select{
+    color: white;
+    font-size:20px;
+    border-style: none;
+    height: 40px;
+    width: 100%;
+    background-color: #666;
+}
+
+option{
+    color: white;
+    font-size:20px;
+    border-style: none;
+    height: 40px;
+    width: 100%;
+    background-color: #666;    
+}
